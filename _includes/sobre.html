@@ -1,0 +1,26 @@
+<section id="sobre" class="section scrollspy primary-color-text">
+    <section class="row">
+        <article class="col s12 m6">
+            <article class="container">
+                {% for item in site.sobre limit: 1 %}
+                    <h3 class="center-align">
+                        <i class="fas fa-info-circle"></i>
+                        Sobre
+                    </h3>
+                    <p class="justified">{{ item.description }}</p>
+                {% endfor %}
+
+                <div class="center">
+                    <button class="btn-large waves-effect waves-light modal-trigger" data-target="sobre-modal">Saiba Mais</button>
+                    <a href="mailto:{{ site.email }}" class="btn-large btn-flat waves-effect waves-primary">Contacte-nos</a>
+                </div>
+            </article>
+        </article>
+
+        <div class="col s12 m6 hide-on-small-only">
+            <img src="{{ site.image }}" alt="{{ site.title }}">
+        </div>
+    </section>
+</section>
+
+{% include sobre-modal.html %}

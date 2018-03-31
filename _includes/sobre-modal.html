@@ -1,0 +1,18 @@
+<div id="sobre-modal" class="modal primary-color-text">
+    <div class="center">
+        <img src="{{ site.logo }}" alt="{{ site.title}} Logo" style="width: 200px; height: 200px;">
+    </div>
+
+    <section class="row">
+        {% for item in site.sobre %}
+            <div id="{{ item.title | downcase }}" class="col s12">
+                <div class="container">
+                    {% unless forloop.first %}
+                        <h4 class="center-align">{{ item.title }}</h4>
+                        <p class="justified">{{ item.description }}</p>
+                    {% endunless %}
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+</div>
