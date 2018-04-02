@@ -1,5 +1,5 @@
 ---
 title: proimagem
-image: /assets/img/uploads/proimagem.png
+image: /assets/img/uploads/prodution.jpg
 ---
 

@@ -1,5 +1,5 @@
 ---
 title: Bordados
-image: /assets/img/uploads/boradados.png
+image: /assets/img/uploads/bordado.jpg
 ---
 

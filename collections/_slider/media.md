@@ -1,5 +1,5 @@
 ---
 title: autocolantes
-image: /assets/img/uploads/autocolantes.png
+image: /assets/img/uploads/recepcao.jpg
 ---
 
