@@ -1,18 +1,19 @@
 <script
+    defer
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script src="/assets/js/masonry.pkgd.min.js" ></script>
-<script src="/assets/js/main.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script defer src="/assets/js/masonry.pkgd.min.js"></script>
+<script defer src="/assets/js/main.js"></script>
 
 {% if page.title == "Galeria" %}
     <link rel="stylesheet" href="/assets/css/lightbox.min.css">
-    <script src="/assets/js/lightbox.min.js"></script>
+    <script defer src="/assets/js/lightbox.min.js"></script>
 {% endif %}
 
-<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 {% unless page.layout == "page" %}
     <!-- netlify widget -->
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script type="text/javascript" defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {% endunless %}

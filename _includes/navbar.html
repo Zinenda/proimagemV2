@@ -1,16 +1,34 @@
 <div class="navbar-fixed">
-    <nav>
+    <nav class="nav-extended">
         <div class="nav-wrapper">
             <div class="container">
-                <a href="/" class="brand-logo" title="{{ site.title }}">{{ site.title }}</a>
+                <a href="/" class="brand-logo" title="{{ site.title }}">
+                    <object data="/assets/img/logotype-white.svg" type="image/svg" height="55px"></object>
+                </a>
                 <a data-target="sideNav" class="sidenav-trigger">
                     <i class="fas fa-2x fa-bars"></i>
                 </a>
 
                 <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/" title="{{ site.title }}">
+                            <i class="fas fa-home"></i>
+                            Página Inicial
+                        </a>
+                    </li>
                     {% include nav.html %}
                 </ul>
             </div>
+        </div>
+
+        <div class="nav-content">
+            <a href="mailto:{{ site.email }}" class="btn-large btn-floating waves-effect waves-light halfway-fab hide-on-small-only">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="tel:+258 84 527 4702" class="btn-large btn-floating waves-effect waves-light halfway-fab hide-on-med-and-up">
+                <i class="fas fa-mobile"></i>
+            </a>
         </div>
     </nav>
 </div>
