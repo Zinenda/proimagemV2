@@ -3,7 +3,10 @@
         <div class="nav-wrapper">
             <div class="container">
                 <a href="/" class="brand-logo" title="{{ site.title }}">
-                    <object data="/assets/img/logotype-white.svg" type="image/svg" height="55px"></object>
+                    <div class="hide-on-med-and-down">
+                        <object data="/assets/img/logotype-white.svg" type="image/svg" height="55px"></object>
+                    </div>
+                    <div class="hide-on-large-only">{{ site.title }}</div>
                 </a>
                 <a data-target="sideNav" class="sidenav-trigger">
                     <i class="fas fa-2x fa-bars"></i>
