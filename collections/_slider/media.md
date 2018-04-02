@@ -1,5 +1,5 @@
 ---
 title: recepcao
-image: /assets/img/uploads/inn.jpg
+image: /assets/img/uploads/inner.jpg
 ---
 
