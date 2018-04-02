@@ -1,6 +1,6 @@
 ---
 title: Identidade Visual
-icon: Identidades Visuais
+image: /assets/img/uploads/identity.jpg
 description: >-
   Muitas vezes sua empresa ainda não possui um logotipo, isto é uma identidade
   designada pelo proprietário. É certo que após algum tempo, e maturidade, a
