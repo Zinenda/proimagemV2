@@ -1,5 +1,5 @@
 ---
 title: Estabelecimento
-image: /assets/img/uploads/bordado.jpg
+image: /assets/img/uploads/estabelecimento.jpg
 ---
 
