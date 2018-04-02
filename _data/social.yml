@@ -1,15 +1,19 @@
 - link: https://facebook.com/
   title: Facebook
-  icon: facebook
+  icon: facebook-f
 
-- link: https://twiiter.com/
-  title: Twitter
-  icon: twitter
+- link: https://m.me/
+  title: Messenger
+  icon: facebook-messenger
 
 - link: https://instagram.com/
   title: Instagram
   icon: instagram
 
+- link: "tel:+258 84 527 4702"
+  title: Celular
+  icon: mobile
+
 - link: mailto:info@proimagem.co.mz
   title: Email
-  icon: envelope-o
+  icon: envelope-open

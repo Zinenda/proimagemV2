@@ -1,6 +1,6 @@
 ---
 title: Valores
-image: /assets/img/uploads/valores.jpeg
+icon: handshake
 description: 'Respeito, Cooperação, Aprendizado, Contínuo, Honestidade, Responsabilidade'
 ---
 

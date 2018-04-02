@@ -1,26 +1,35 @@
-<section id="sobre" class="section scrollspy primary-color-text">
-    <section class="row">
-        <article class="col s12 m6">
-            <article class="container">
-                {% for item in site.sobre limit: 1 %}
-                    <h3 class="center-align">
-                        <i class="fas fa-info-circle"></i>
-                        Sobre
-                    </h3>
-                    <p class="justified">{{ item.description }}</p>
-                {% endfor %}
+<section id="sobre" class="section scrollspy center primary-color-text">
+    <div class="container">
+        <h3>
+            <i class="fas fa-info-circle"></i> <br>
+            Sobre
+        </h3>
 
-                <div class="center">
-                    <button class="btn-large waves-effect waves-light modal-trigger" data-target="sobre-modal">Saiba Mais</button>
-                    <a href="mailto:{{ site.email }}" class="btn-large btn-flat waves-effect waves-primary">Contacte-nos</a>
+        <p>A sua Image é a Nossa <strong>Prioridade</strong></p>
+        {% include social.html %}
+        <hr class="divider">
+        <div class="row">
+            {% for item in site.sobre %}
+                <div class="col s12 l4 hoverable">
+                    <h4>
+                        <i class="fas fa-{{ item.icon }}"></i> <br>
+                        {{ item.title }}
+                    </h4>
+                    <p class="justify">{{ item.description }}</p>
                 </div>
-            </article>
-        </article>
-
-        <div class="col s12 m6 hide-on-small-only">
-            <img src="{{ site.image }}" alt="{{ site.title }}">
+            {% endfor %}
         </div>
-    </section>
+    </div>
 </section>
 
-{% include sobre-modal.html %}
+<section id="sobre-parallax"></section>
+
+<style>
+    #sobre-parallax {
+        height: 50vh;
+        background-image: url(/assets/img/parallax/DSC07598.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

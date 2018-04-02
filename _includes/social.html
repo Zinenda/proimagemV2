@@ -1,0 +1,18 @@
+<div class="center">
+    <ul class="inline-list">
+        {% for item in site.data.social limit: 3 %}
+            <li>
+                <a href="{{ item.link }}" class="btn-floating tooltipped" data-position="bottom" data-tooltip="{{ item.title }}">
+                    <i class="fab fa-{{ item.icon }}"></i>
+                </a>
+            </li>
+        {% endfor %}
+        {% for item in site.data.social offset: 3 limit: 2 %}
+            <li>
+                <a href="{{ item.link }}" class="btn-floating tooltipped waves-effect waves-light" data-position="bottom" data-tooltip="{{ item.title }}">
+                    <i class="fas fa-{{ item.icon }}"></i>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

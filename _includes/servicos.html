@@ -1,27 +1,36 @@
-<section id="servicos" class="section primary-color-light white-text scrollspy">
-    <section>
-        <h3 class="center-align"><i class="fas fa-briefcase"></i> Serviços</h3><br><br>
+<section id="servicos" class="section scrollspy primary-color-light">
+    <div class="container center">
+        <h3 class="white-text">
+            <i class="fas fa-tasks"></i> <br> Serviços
+        </h3>
 
-        <section class="row">
+        <div class="row">
             {% for item in site.servicos %}
-                <div class="col s12 l6">
-                    <div class="center">
-                        <i class="fa-3x fas fa-{{ item.icon }}"></i>
-                        <h4>{{ item.title }}</h4>
+                <div class="col s12 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-image">
+                            <img src="{{ item.image }}" alt="{{ item.title }}">
+                            <span class="card-title secondary-color white-text">{{ item.title }}</span>
+                        </div>
+
+                        <div class="card-content">
+                            <p class="justify">{{ item.description }}</p>
+                        </div>
                     </div>
-                    <hr>
-                    <p>{{ item.description }}</p>
                 </div>
             {% endfor %}
-        </section>
-    </section>
+        </div>
+    </div>
 </section>
 
+<section id="servicos-parallax"></section>
+
 <style>
-    #servicos {
-        background-image: url(/assets/img/parallax-servicos.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
+    #servicos-parallax {
+        height: 50vh;
+        background-image: url(/assets/img/parallax/DSC08125.jpg);
         background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>

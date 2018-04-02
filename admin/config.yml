@@ -25,20 +25,20 @@ collections:
         name: "title"
         widget: "select"
         options: ["Missão", "Visão", "Valores"]
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Description", name: "description", widget: "string"}
+      - label: "Icon"
+        name: "icon"
+        widget: "select"
+        options: ["eye", "tasks", "handshake"]
+      - {label: "Description", name: "description", widget: "text"}
 
   - label: "Serviços"
     name: "servicos"
     folder: "collections/_servicos"
     create: true
     fields:
-      - label: "Titulo"
-        name: "title"
-        widget: "select"
-        options: ["Bordados", "Estampagem", "Cartões de Visita", "Banners", "Roll-ups", "Livros", "Convites", "Identidade Visual"]
-      - {label: "icon", name: "icon", widget: "string", required: "false"}
-      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
 
   - label: "Galeria"
     name: "galeria"

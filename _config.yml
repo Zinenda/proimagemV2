@@ -16,10 +16,11 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - bower_components
 
 logo: /assets/img/logo-white.svg
 image: /assets/img/logotype-white.svg
-color: "#425527"
+color: "#2a450e"
 
 sass:
   sass_dir: assets/_sass
@@ -31,6 +32,7 @@ collections:
   slider:
   galeria:
   servicos:
+
 plugins:
   - jekyll-paginate-v2
   - jekyll-email-protect
