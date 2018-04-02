@@ -1,6 +1,6 @@
 ---
 title: Cartões de Visita
-icon: Cartões de visita
+image: /assets/img/uploads/cartao.jpeg
 description: >-
   Os cartões de visita são importantes para apresentar um negócio e ser achado
   facilmente por seus clientes (ou possíveis clientes). Montar um bom cartão não

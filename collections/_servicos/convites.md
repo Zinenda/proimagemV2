@@ -1,6 +1,6 @@
 ---
 title: Convites
-icon: Convites
+image: /assets/img/uploads/convites.jpg
 description: >-
   O momento ideal para começar a decidir sobre a escolha dos modelos de convites
   de casamento e fazer a corrida atrás de bons preços e boa qualidade é por
