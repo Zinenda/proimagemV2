@@ -1,5 +1,5 @@
 ---
 title: Estabelecimento
-image: /assets/img/uploads/estabelecimento.jpg
+image: /assets/img/uploads/estacionamento.jpg
 ---
 
