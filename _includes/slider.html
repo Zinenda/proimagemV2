@@ -1,0 +1,7 @@
+<header class="carousel carousel-slider">
+    {% for item in site.slider limit: 4 %}
+        <a href="#{{ item.title }}" class="carousel-item">
+            <img src="{{ item.image }}" alt="">
+        </a>
+    {% endfor %}
+</header>
