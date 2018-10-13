@@ -1,5 +1,6 @@
 $(document).ready(function(){
   M.AutoInit();
+  $('.scrollspy').scrollSpy();
   $('.modal').modal();
   $('.slider').slider({
     height: 600
