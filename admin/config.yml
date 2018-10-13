@@ -29,7 +29,7 @@ collections:
         name: "icon"
         widget: "select"
         options: ["eye", "tasks", "handshake"]
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Serviços"
     name: "servicos"
@@ -38,7 +38,7 @@ collections:
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Galeria"
     name: "galeria"
