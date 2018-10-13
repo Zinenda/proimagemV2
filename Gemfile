@@ -12,7 +12,6 @@ gem "jekyll", "~> 3.7.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
   gem "jekyll-email-protect" 
   gem "jekyll-paginate-v2"
   gem "jekyll-seo-tag"
