@@ -6,7 +6,15 @@
   title: Serviços
   icon: briefcase
 
-- link: "#galeria"
+- link: "#equipamentos"
+  title: Equipamentos
+  icon: cogs
+
+- link: "#clientes"
+  title: Clientes
+  icon: users
+
+- link: "/galeria/"
   title: Galeria
   icon: image
 

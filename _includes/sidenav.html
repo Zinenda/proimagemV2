@@ -13,7 +13,7 @@
             </li>
         {% for item in site.data.nav %}
             <li>
-                <a href="{% if page.layout == "page" %}/{% endif %}{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light white-text">
+                <a href="{% if page.layout == "page" %}/{% endif %}{{ item.link }}" title="{{ item.title }}" class="{% if item.modal %}modal-trigger{% endif %} waves-effect waves-light white-text">
                     <i class="white-text fas fa-{{ item.icon }} fa-fw"></i> {{ item.title }}
                 </a>
             </li>
