@@ -40,6 +40,14 @@ collections:
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
+- label: "Equipamentos"
+    name: "equipamentos"
+    folder: "collections/_equipamentos"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+
   - label: "Galeria"
     name: "galeria"
     folder: "collections/_galeria"
