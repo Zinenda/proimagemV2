@@ -6,7 +6,7 @@
             </div>
             <div class="col s12 l6">
                 {% for item in site.sobre limit: 1 %}
-                    <h4 class="center-align bolder"><i class="fas fa-{{ item.icon }}"></i> {{ item.title }}</h4>
+                    <h4 class="center-align bolder"><i class="fas fa-{{ item.icon }}"></i> {{ item.title | upcase }}</h4>
 
                     <div class="justify">
                         {{ item.content }}
