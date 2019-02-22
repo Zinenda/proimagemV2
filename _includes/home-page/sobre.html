@@ -5,8 +5,8 @@
                 <img src="/assets/img/uploads/sobre.png" alt="Sobre">
             </div>
             <div class="col s12 l6">
-                {% for item in site.sobre limit: 1 %}
-                    <h4 class="center-align bolder"><i class="fas fa-{{ item.icon }}"></i> {{ item.title | upcase }}</h4>
+                {% for item in site.sobre offset: 1 %}
+                    <p class="bolder"><i class="fas fa-{{ item.icon }}"></i> {{ item.title | upcase }}</p>
 
                     <div class="justify">
                         {{ item.content }}
@@ -14,28 +14,5 @@
                 {% endfor %}
             </div>
         </div>
-
-        <section class="row">
-            {% for item in site.sobre offset: 1 %}
-                <div class="col s12 l4">
-                    <p class="bolder center-align"><i class="fas fa-{{ item.icon }}"></i> {{ item.title }}</p>
-
-                    <div class="justify">
-                        {{ item.content }}
-                    </div>
-                </div>
-            {% endfor %}
-        </section>
     </div>
 </section>
-
-<style>
-    #sobre-parallax {
-        height: 50vh;
-        background-image: url(/assets/img/parallax/DSC07598.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-</style>
