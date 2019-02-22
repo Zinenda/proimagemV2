@@ -1,22 +1,11 @@
-<aside id="sideNav" class="sidenav primary-color">
+<aside id="sideNav" class="sidenav">
     <div class="container">
         <a href="/">
             <img src="{{ site.image }}" alt="{{ site.title }}">
         </a>
     </div>
-    <div class="divider"></div>
+    <hr class="divider">
     <ul>
-            <li>
-                <a href="/" title="{{ site.title }}" class="waves-effect waves-light white-text">
-                    <i class="white-text fas fa-home"></i>Página Inicial
-                </a>
-            </li>
-        {% for item in site.data.nav %}
-            <li>
-                <a href="{% if page.layout == "page" %}/{% endif %}{{ item.link }}" title="{{ item.title }}" class="{% if item.modal %}modal-trigger{% endif %} waves-effect waves-light white-text">
-                    <i class="white-text fas fa-{{ item.icon }} fa-fw"></i> {{ item.title }}
-                </a>
-            </li>
-        {% endfor %}
+        {% include nav.html %}
     </ul>
 </aside>

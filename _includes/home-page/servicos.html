@@ -1,0 +1,27 @@
+<section id="servicos" class="section scrollspy">
+    <div class="container">
+        <h4 class="bolder center-align white-text">
+            <i class="fas fa-briefcase"></i> SERVIÇOS
+        </h4>
+
+        <div class="row slick">
+            {% for item in servicos %}
+                <div>
+                    <div class="card" style="padding: 5px">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img src="{{ item.image }}" alt="{{ item.title }}" class="activator">
+                            <div class="card-title bold">{{ item.title }}</div>
+                        </div>
+                        <div class="card-reveal">
+                            <div class="card-title center activator white-text bold">{{ item.title }}</div>
+
+                            <div class="light justify">
+                                {{ item.content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
