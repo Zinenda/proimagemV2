@@ -1,20 +1,17 @@
 backend:
   name: git-gateway
-  accept_roles:
-    - admin
-    - client
   branch: master
 
-media_folder: "assets/img/uploads"
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 
+
+site_url: https://proimagem.co.mz
+
+logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
   
 collections:
-  - label: "Slider"
-    name: "slider"
-    folder: "collections/_slider"
-    create: true
-    fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
 
   - label: "Sobre"
     name: "sobre"
@@ -40,21 +37,28 @@ collections:
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
-- label: "Equipamentos"
-    name: "equipamentos"
-    folder: "collections/_equipamentos"
-    create: true
-    fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
+  - label: "Equipamentos"
+      name: "equipamentos"
+      folder: "collections/_equipamentos"
+      create: true
+      fields:
+        - {label: "Marca", name: "title", widget: "string"}
+        - {label: "Foto", name: "image", widget: "image"}
 
-- label: "Clientes"
+  - label: "Clientes"
     name: "clientes"
     folder: "collections/_clientes"
     create: true
     fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Clientes", name: "title", default: "Clientes", widget: "string"}
+      - label: "Cliente"
+        name: "client"
+        widget: "list"
+        fields:
+          - {label: "Empresa", name: "company", widget: "string"}
+          - label: "Logotipo"
+            name: "image"
+            widget: "image"
 
   - label: "Galeria"
     name: "galeria"
