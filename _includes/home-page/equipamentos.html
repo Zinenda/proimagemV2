@@ -1,4 +1,4 @@
-<section id="equipamentos" class="section scrollspy center primary-color-light">
+<section id="equipamentos" class="section scrollspy primary-color-text">
     <section class="container">
         <h4 class="bolder white-text">
             <i class="fas fa-cogs"></i> EQUIPAMENTOS
@@ -6,16 +6,7 @@
         <section class="row slick">
             {% for item in site.equipamentos %}
                 <div>
-                    <div class="card medium hoverable">
-                        <div class="card-image">
-                            <img src="{{ item.image }}" alt="{{ item.title }}">
-                        </div>
-                        <div class="card-content">
-                            <div class="card-title primary-color-text bolder">
-                                {{ item.title }}
-                            </div>
-                        </div>
-                    </div>
+                    <img src="{{ item.image }}" alt="{{ item.title }}" class="materialboxed" data-caption="{{ item.title }}">
                 </div>
             {% endfor %}
         </section>
