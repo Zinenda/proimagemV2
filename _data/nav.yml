@@ -6,19 +6,18 @@
   title: Serviços
   icon: briefcase
 
-- link: "#equipamentos"
-  title: Equipamentos
-  icon: cogs
-
 - link: "#clientes"
   title: Clientes
   icon: users
 
+- link: "#equipamentos"
+  title: Equipamentos
+  icon: cogs
+
+- link: "#localizacao"
+  title: Localização
+  icon: map-marker
+
 - link: "/galeria/"
   title: Galeria
   icon: image
-
-- link: "#contactos"
-  title: Contactos
-  icon: envelope
-  modal: true

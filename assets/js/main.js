@@ -1,11 +1,9 @@
 $(document).ready(function(){
   M.AutoInit();
+  $('.sidenav').sidenav();
   $('.scrollspy').scrollSpy();
   $('.modal').modal();
-  $('.slider').slider({
-    height: 600
-  });
-
+  
   var $container = $('#masonry-grid');
     // initialize
     $container.masonry({
