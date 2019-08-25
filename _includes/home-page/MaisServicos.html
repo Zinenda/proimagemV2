@@ -1,0 +1,35 @@
+<section id="servicos" class="section scrollspy">
+    <div class="container">
+        <div class="slick-servicos">
+            {% for item in site.servicos %}
+                <div style="padding-left: 10px">
+                    <div class="card-panel z-depth-5 hoverable">
+                        <h5 class="bolder">{{ item.title }}</h5>
+                        <div class="divider"></div>
+
+                        <img src="{{ item.image }}" alt="{{ item.title }}" class="materialboxed" data-caption="{{ item.title }}">
+                        <div class="divider"></div>
+
+                        <div class="light">
+                            {{ item.content | truncatewords: 10 }}
+                        </div>
+
+                        <a href="#servicos{{ forloop.index }}" class="btn waves-effect waves-light modal-trigger">Leia Mais</a>
+                    </div>
+                </div>    
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% for item in site.servicos %}
+    <div class="modal primary-color-text" id="servicos{{ forloop.index }}">
+        <div class="modal-content container">
+            <h5 class="bolder">{{ item.title }}</h5>
+
+            <div class="light">
+                {{ item.content }}
+            </div>
+        </div>
+    </div>
+{% endfor %}

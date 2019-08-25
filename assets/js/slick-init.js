@@ -7,7 +7,7 @@ $('.single-item').slick({
   autoplaySpeed: 3000,
 });
 
-$('.slick').slick({
+$('.slick-servicos').slick({
     dots: true,
     infinite: false,
     speed: 300,
