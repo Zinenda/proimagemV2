@@ -1,0 +1,40 @@
+<nav class="transparent white-text">
+    <div>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo" style="padding-left: 10px; padding-top: 10px;">
+                <img src="/assets/img/ProImagemLogoWhite.svg" width="160" alt="{{ site.title }}">
+                
+            </a>
+
+            <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="fas fa-2x fa-bars"></i></a>
+
+            <ul class="right hide-on-med-and-down" style="padding-right: 10px;">
+                {% for item in site.data.nav %}
+                    <li>
+                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light white-text {% if item.modal %}modal-trigger {% elsif item.dropdown %}dropdown-trigger{% endif %}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+
+                <li>
+                    <a href="/en/" title="English" class="waves-effect waves-light"><i class="fas fa-globe"></i></a>
+                </li>
+
+                {% for item in site.data.social limit: 4 %}
+                    <li>
+                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light">
+                            <i class="fab fa-{{ item.icon }}"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+
+                {% for item in site.data.social offset: 4 %}
+                    <li>
+                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light">
+                            <i class="fas fa-{{ item.icon }}"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,23 +1,19 @@
 - link: "#sobre"
   title: Sobre
-  icon: info-circle
 
 - link: "#servicos"
   title: Serviços
-  icon: briefcase
-
-- link: "#clientes"
-  title: Clientes
-  icon: users
 
 - link: "#equipamentos"
   title: Equipamentos
-  icon: cogs
 
-- link: "#localizacao"
-  title: Localização
-  icon: map-marker
+- link: "#clientes"
+  title: Clientes
 
-- link: "/galeria/"
-  title: Galeria
-  icon: image
+- link: "#portfolio"
+  title: Portfolio
+  dropdown: true
+
+- link: "#contactos"
+  title: Contactos
+  modal: true

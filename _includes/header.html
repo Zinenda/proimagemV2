@@ -1,16 +1,27 @@
-<header>
+<header class="white-text">
+    {% include nav/navbar.html %}
     <br><br><br>
-    <div class="container center">
-        <a href="/">
-            <img src="{{ site.image }}" alt="{{ site.title }}" style="width: 50%">
-        </a>
+    <div class="center container">
         
         {% unless page.layout == "page" %}
-            <article class="justify bold container white-text">
+            <article class="justify bolder">
+                <h1 class="bolder hide-on-med-and-down">{{ site.title }}</h1>
+
                 {% for item in site.sobre limit: 1 %}
                     {{ item.content }}
                 {% endfor %}
             </article>
+
+            <section class="section-grid section">
+                {% for item in site.sobre offset: 1 limit: 3 %}
+                    <div class="card-panel hoverable center">
+                        <a href="#{{ forloop.index }}" title="{{ item.title }}" class="modal-trigger primary-color-text">
+                            <span class="fas fa-2x fa-{{ item.icon }}"></span>
+                            <h6 class="bolder primary-color-text">{{ item.title }}<h6>
+                        </a>
+                    </div>
+                {% endfor %}
+            </section>
         {% endunless %}
 
         {% if page.layout == "page" %}
@@ -21,3 +32,5 @@
     </div>
     <br><br><br>
 </header>
+
+{% include home-page/sobreModal.html %}
