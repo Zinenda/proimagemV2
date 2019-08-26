@@ -1,10 +1,10 @@
-<div id="clientes" class="section scrollspy white primary-color-text">
+<div id="clientes" class="section scrollspy white-text center">
     <div class="container">
-        <h4 class="bolder"><i class="fas fa-user-tag"></i> Clientes</h4>
-        <div class="row slick-clientes">
+        <h4 class="bolder">Clientes & Fornecedores</h4>
+        <div class="slick-clientes">
             {% for item in site.clientes.first.client %}
                 <div>
-                    <img src="{{ item.image }}" alt="{{ item.company }}" style="width: 80px" class="grey-img">
+                    <img src="{{ item.image }}" alt="{{ item.company }}" style="width: 80px">
                 </div>
             {% endfor %}
         </div>
