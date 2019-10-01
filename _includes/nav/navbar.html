@@ -1,40 +1,40 @@
-<nav class="transparent white-text">
-    <div>
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo" style="padding-left: 10px; padding-top: 10px;">
-                <img src="/assets/img/ProImagemLogoWhite.svg" width="160" alt="{{ site.title }}">
-                
-            </a>
+<div class="navbar-fixed">
+    <nav class="white primary-color-text">
+        <div>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo center" style="padding-top: 10px;">
+                    <img src="/assets/img/ProImagemLogo.svg" width="160" alt="{{ site.title }}">
+                    
+                </a>
 
-            <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="fas fa-2x fa-bars"></i></a>
+                <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="fas fa-2x fa-bars"></i></a>
 
-            <ul class="right hide-on-med-and-down" style="padding-right: 10px;">
-                {% for item in site.data.nav %}
+                <ul class="hide-on-med-and-down">
+                    {% include nav/nav.html %}
+                </ul>
+
+                <ul class="right hide-on-med-and-down">
                     <li>
-                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light white-text {% if item.modal %}modal-trigger {% elsif item.dropdown %}dropdown-trigger{% endif %}">{{ item.title }}</a>
+                        <a href="/en/" title="English" class="waves-effect waves-primarry primary-color-text"><i class="fas fa-globe"></i></a>
                     </li>
-                {% endfor %}
 
-                <li>
-                    <a href="/en/" title="English" class="waves-effect waves-light"><i class="fas fa-globe"></i></a>
-                </li>
+                    {% for item in site.data.social limit: 4 %}
+                        <li>
+                            <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-primary primary-color-text">
+                                <i class="fab fa-{{ item.icon }}"></i>
+                            </a>
+                        </li>
+                    {% endfor %}
 
-                {% for item in site.data.social limit: 4 %}
-                    <li>
-                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light">
-                            <i class="fab fa-{{ item.icon }}"></i>
-                        </a>
-                    </li>
-                {% endfor %}
-
-                {% for item in site.data.social offset: 4 %}
-                    <li>
-                        <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-light">
-                            <i class="fas fa-{{ item.icon }}"></i>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
+                    {% for item in site.data.social offset: 4 %}
+                        <li>
+                            <a href="{{ item.link }}" title="{{ item.title }}" class="waves-effect waves-primary primary-color-text">
+                                <i class="fas fa-{{ item.icon }}"></i>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

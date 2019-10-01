@@ -43,6 +43,10 @@ collections:
       create: true
       fields:
         - {label: "Marca", name: "title", widget: "string"}
+        - label: "Categoria"
+          name: "category"
+          widget: "select"
+          options: ["Impressoras", "Bordados", "Picotagem", "Plotes"]
         - {label: "Foto", name: "image", widget: "image"}
 
   - label: "Clientes"

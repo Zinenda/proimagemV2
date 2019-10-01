@@ -1,36 +1,26 @@
-<header class="white-text">
-    {% include nav/navbar.html %}
-    <br><br><br>
-    <div class="center container">
-        
-        {% unless page.layout == "page" %}
-            <article class="justify bolder">
-                <h1 class="bolder hide-on-med-and-down">{{ site.title }}</h1>
+<header class="grey lighten-4" style="height: 100vh">
+    <div class="section-grid">
+        <article class="container">
+            <h1>Somos a <strong class="primary-color-text bolder">{{ site.title }}</strong></h1>
+            <h4><b class="bold">{{ site.time | date: "%Y" | minus: 2009 }}</b> anos oferecendo <br> <strong class="primary-color-text bolder">{{ site.description }}</strong></h4>
 
-                {% for item in site.sobre limit: 1 %}
-                    {{ item.content }}
-                {% endfor %}
-            </article>
+            <a href="#sobre" class="modal-trigger waves-effect waves-light btn-large">Conheça-nos</a>
 
-            <section class="section-grid section">
-                {% for item in site.sobre offset: 1 limit: 3 %}
-                    <div class="card-panel hoverable center">
-                        <a href="#{{ forloop.index }}" title="{{ item.title }}" class="modal-trigger primary-color-text">
-                            <span class="fas fa-2x fa-{{ item.icon }}"></span>
-                            <h6 class="bolder primary-color-text">{{ item.title }}<h6>
-                        </a>
-                    </div>
-                {% endfor %}
-            </section>
-        {% endunless %}
+            <a href="#contactos" class="btn-large waves-effect waves-light">Conhecte-nos</a>
+        </article>
 
-        {% if page.layout == "page" %}
-            <h3 class="bolder white-text">{{ page.title }}</h3>
-        {% endif %}
-
-        <a href="#contactos" class="btn-large modal-trigger waves-effect waves-light" title="Contactos">Contacte-nos</a>
+        <img src="" alt="">
     </div>
-    <br><br><br>
 </header>
 
-{% include home-page/sobreModal.html %}
+<div id="sobre" class="modal">
+    <div class="container modal-content">
+        <h5 class="primary-color-text">Sobre a <strong class="bold">{{ site.title }}</strong></h5>
+
+        {% for item in site.sobre limit: 1 %}
+            <article class="light text-justified">
+                {{ item.content }}
+            </article>
+        {% endfor %}
+    </div>
+</div>

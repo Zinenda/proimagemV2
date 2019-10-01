@@ -1,0 +1,20 @@
+{% unless page.layout == "page" %}
+    <h1 class="bolder hide-on-med-and-down">{{ site.title }}</h1>
+
+    <h3 class="bolder">{{ site.description }}</h3>
+
+    {% for item in site.sobre limit: 1 %}
+        {{ item.content }}
+    {% endfor %}
+
+    <section class="section-grid section">
+        {% for item in site.sobre offset: 1 limit: 3 %}
+            <div class="card-panel hoverable center" style="background: {{ site.color }};">
+                <a href="#{{ forloop.index }}" title="{{ item.title }}" class="modal-trigger white-text">
+                    <span class="fas fa-2x fa-{{ item.icon }}"></span>
+                    <h6 class="bolder white-text">{{ item.title }}<h6>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+{% endunless %}
