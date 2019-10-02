@@ -1,20 +1,30 @@
-<section class="section primary-color-text grey lighten-4">
+<section id="servicos" class="section scrollspy">
     <div class="container">
-        <h4 class="bolder center-align">O que Fazemos</h4>
-        <div class="row">
-            <div class="col 12 l6">
-                <img src="/assets/img/uploads/sobre.png" alt="Sobre">
-            </div>
-            <div class="col s12 l6">
-                {% for item in site.servicos limit: 3 %}
-                    <p class="bolder">{{ item.title | upcase }}</p>
+        <section class="section-grid">
+            <article>
+                <h4 class="bolder primary-color-text">Nossos Serviços</h4>
 
-                    <article class="light">
-                        {{ item.content }}
-                    </article>
-                    <hr>
+                <p class="text-justified">Oferecemos uma vasta gama de serviços de <strong class="bolder primary-color-text">{{ site.description }}</strong> <br>
+                    <br> Somos confiandos por várias empresas nacionais e internacionais e temos uma vasta experiência no mercado</p>
+            </article>
+
+            <article class="section-grid">
+                {% for item in site.servicos limit: 2 %}
+                    <div class="card-panel z-depth-5 hoverable">
+                        <h5 class="bolder">{{ item.title }}</h5>
+                        <div class="divider"></div>
+
+                        <img src="{{ item.image }}" alt="{{ item.title }}" class="materialboxed" data-caption="{{ item.title }}">
+                        <div class="divider"></div>
+
+                        <div class="light">
+                            {{ item.content | truncatewords: 10 }}
+                        </div>
+
+                        <a href="#servicos{{ forloop.index }}" class="btn waves-effect waves-light modal-trigger">Leia Mais</a>
+                    </div>
                 {% endfor %}
-            </div>
-        </div>
+            </article>
+        </section>
     </div>
 </section>

@@ -2,11 +2,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font: {
-        size: 100%;
-        family: 'Arial', sans-serif;
-    }
-    color: #444
+    font-size: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #444;
 }
 
 main {
@@ -27,10 +25,22 @@ img {
     }
 }
 
-p {
+.text-justified {
     text-align: justified;
 }
 
 .inline-list {
     display: inline-flex;
+}
+
+.bolder, strong {
+    font-weight: bolder;
+}
+
+b {
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
 }
