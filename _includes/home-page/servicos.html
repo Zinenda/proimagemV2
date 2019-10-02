@@ -10,18 +10,16 @@
 
             <article class="section-grid">
                 {% for item in site.servicos limit: 2 %}
-                    <div class="card-panel z-depth-5 hoverable">
+                    <div class="card-panel z-depth-5 hoverable" data-aos="zoom-in" data-aos-duration="3000">
                         <h5 class="bolder">{{ item.title }}</h5>
-                        <div class="divider"></div>
 
-                        <img src="{{ item.image }}" alt="{{ item.title }}" class="materialboxed" data-caption="{{ item.title }}">
-                        <div class="divider"></div>
+                        <img data-src="{{ item.image }}" alt="{{ item.title }}" class="lazy materialboxed" data-caption="{{ item.title }}">
 
-                        <div class="light">
+                        <div class="light text-justified">
                             {{ item.content | truncatewords: 10 }}
                         </div>
 
-                        <a href="#servicos{{ forloop.index }}" class="btn waves-effect waves-light modal-trigger">Leia Mais</a>
+                        <a href="#servicos{{ item.title }}" class="btn waves-effect waves-light modal-trigger">Leia Mais</a>
                     </div>
                 {% endfor %}
             </article>

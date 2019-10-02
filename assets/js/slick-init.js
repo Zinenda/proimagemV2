@@ -9,6 +9,7 @@ $('.single-item').slick({
 
 $('.slick-servicos').slick({
     dots: true,
+    lazyLoad: 'ondemand',
     infinite: false,
     speed: 300,
     slidesToShow: 4,
