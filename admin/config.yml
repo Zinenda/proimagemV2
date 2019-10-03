@@ -1,11 +1,9 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: version2
+  use_large_media_transforms_in_media_library: false
 
-media_library:
-  name: uploadcare
-  config:
-    publicKey: 
+media_folder: 'assets/uploads'
 
 site_url: https://proimagem.co.mz
 
@@ -42,12 +40,16 @@ collections:
       folder: "collections/_equipamentos"
       create: true
       fields:
-        - {label: "Marca", name: "title", widget: "string"}
         - label: "Categoria"
-          name: "category"
+          name: "title"
           widget: "select"
-          options: ["Impressoras", "Bordados", "Picotagem", "Plotes"]
-        - {label: "Foto", name: "image", widget: "image"}
+          options: ["Impressoras", "Bordados", "Picotagem", "Plotes", "Estampagem"]
+        - label: "Marca"
+          name: "brand"
+          widget: "list"
+          fields:
+            - {label: "Modelo", name: "reference", widget: "string"}
+            - {label: "Imagem", name: "image", widget: "image"}
 
   - label: "Clientes"
     name: "clientes"
