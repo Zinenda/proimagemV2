@@ -9,11 +9,10 @@ $('.single-item').slick({
 
 $('.slick-servicos').slick({
     dots: true,
-    lazyLoad: 'ondemand',
     infinite: false,
     speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1024,
@@ -47,6 +46,7 @@ $('.slick-servicos').slick({
 
 $('.slick-clientes').slick({
   dots: false,
+  lazyLoad: 'ondemand',
   infinite: true,
   autoplay: true,
   autoplaySpeed: 2000,

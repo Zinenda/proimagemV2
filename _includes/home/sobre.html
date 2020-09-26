@@ -1,0 +1,29 @@
+<section class="section scrollspy" id="sobre">
+    <div class="container">
+        <div class="section-grid">
+            <article>
+                <h4 class="text-title primary-color-text">Conheça Melhor <br> a {{ site.title }}</h4>
+
+                <blockquote>
+                    {% for item in site.sobre limit: 1 %}
+                        {{ item.content }}
+                    {% endfor %}
+                </blockquote>
+            </article>
+
+            <div class="text-title">
+                <ul class="collapsible">
+                    {% for item in site.sobre offset: 1 %}
+                        <li>
+                            <div class="collapsible-header primary-color-text"><strong class="center">{{ item.title }}</strong></div>
+
+                            <div class="collapsible-body">
+                                {{ item.content }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

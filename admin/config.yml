@@ -7,7 +7,7 @@ media_folder: 'assets/uploads'
 
 site_url: https://proimagem.co.mz
 
-logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
+logo_url: 'izitech.co/assets/img/IZILogotipo.svg'
   
 collections:
 
@@ -35,6 +35,22 @@ collections:
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
+  - label: "Portfólio"
+    name: "portfolio"
+    folder: "collections/_portfolio"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+
+  - label: "Clientes"
+    name: "clientes"
+    folder: "collections/_clientes"
+    create: true
+    fields:
+      - {label: "Nome do Cliente", name: "title", widget: "string"}
+      - {label: "Logotipo do cliente", name: "image", widget: "image"}
+
   - label: "Equipamentos"
       name: "equipamentos"
       folder: "collections/_equipamentos"
@@ -50,26 +66,3 @@ collections:
           fields:
             - {label: "Modelo", name: "reference", widget: "string"}
             - {label: "Imagem", name: "image", widget: "image"}
-
-  - label: "Clientes"
-    name: "clientes"
-    folder: "collections/_clientes"
-    create: true
-    fields:
-      - {label: "Clientes", name: "title", default: "Clientes", widget: "string"}
-      - label: "Cliente"
-        name: "client"
-        widget: "list"
-        fields:
-          - {label: "Empresa", name: "company", widget: "string"}
-          - label: "Logotipo"
-            name: "image"
-            widget: "image"
-
-  - label: "Galeria"
-    name: "galeria"
-    folder: "collections/_galeria"
-    create: true
-    fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}

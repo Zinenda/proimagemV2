@@ -1,26 +1,65 @@
-<footer class="page-footer">
+<footer class="page-footer white-text grey darken-4">
     <div class="container">
-        <div class="row">
-            <div class="col s12 l4">
-                <h5>Localização</h5>
-                Bairro Matundo, EN7 <br>
-                Tete, Moçambique
+        <div class="section-grid">
+            <div>
+                <h6 class="text-title">Redes Sociais</h6>
+                <hr>
+                <ul class="inline-list">
+                    {% include social.html %}
+                </ul>
             </div>
 
-            <div class="col s12 l4">
-                <h5>Contactos</h5>
-                Cel: <a href="tel:+258 84 527 4702" class="white-text" title="Celular">+258 84 527 4702
-                <a> <br>
-                Email: <a href="mailto:{{ site.email }}" class="white-text" title="Email">{{ site.email }}</a>
+            <div>
+                <h6 class="text-title">Links Rápidos</h6>
+                <hr>
+
+                <ul>
+                    {% for item in site.data.nav %}
+                        <li>
+                            <a href="{{ item.url }}" title="{{ item.title }}" class="white-text">
+                                <i class="fas fa-caret-right secondary-color-text"></i> {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
 
-            <div class="col s12 l4">
+            <div>
+                <h6 class="text-title">Serviços</h6>
+                <hr>
+
+                <ul>
+                    {% for item in site.servicos %}
+                        <li>
+                            <a href="#servicos{{ item.title }}" title="{{ item.title }}" class="modal-trigger white-text">
+                                <i class="fas fa-caret-right secondary-color-text"></i> {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                {% for item in site.servicos %}
+                    <div id="servicos{{ item.title }}" class="modal">
+                        <div class="modal-content">
+                            <div class="container">
+                                <h6 class="text-title primary-color-text">{{ item.title }}</h6>
+
+                                <article class="light grey-text text-darken-4">
+                                    {{ item.content }}
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+
     <div class="footer-copyright">
-        <div class="container center">
-            &copy; {{ site.time | date: "%Y" }} {{ site.title }} - {{ site.description }}. Todos Direitos Reservados | Powered by <a href="https://izitag.github.io" title="IZItag">IZItag</a>
+        <div class="container section-grid center">
+            <span>&copy; {{ site.time | date: "%Y" }} Todos Direitos Reservados a {{ site.title }}</span>
+
+            <span>Designed by <a href="http://izitech.co" target="_blank" title="IZITech" rel="noopener noreferrer author" class="white-text">IZITech</a></span>
         </div>
     </div>
 </footer>

@@ -1,15 +1,15 @@
-- link: https://www.facebook.com/ProImagemT/
-  title: Facebook
+- title: Facebook
+  url: https://fb.me/proimagemmoz
   icon: facebook-f
 
-- link: https://m.me/ProImagemT/
-  title: Messenger
+- title: Messenger
+  url: https://m.me/proimagemmoz
   icon: facebook-messenger
-
-- link: https://instagram.com/
-  title: Instagram
+  
+- title: Instagram
+  url: https://www.instagram.com/proimagem_lda/
   icon: instagram
 
-- link: "https://wa.me/258845274702"
-  title: WhatsApp
+- title: WhatsApp
+  url: https://wa.me/258845274702
   icon: whatsapp

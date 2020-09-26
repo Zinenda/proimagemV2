@@ -2,6 +2,8 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
   $('.scrollspy').scrollSpy();
   $('.modal').modal();
+  $('.collapsible').collapsible();
+  $('.materialboxed').materialbox();
   
   var $container = $('#masonry-grid');
     // initialize

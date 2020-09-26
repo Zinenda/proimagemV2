@@ -1,5 +1,6 @@
 title: PROIMAGEM
 email: info@proimagem.co.mz
+phone: +258 84 527 4702
 description: >- # this means to ignore newlines until "baseurl:"
   Consultoria & Design
 
@@ -29,11 +30,9 @@ sass:
 collections_dir: collections
 collections:
   sobre:
-  slider:
-  galeria:
   servicos:
   clientes:
-  equipamentos:
+  portfolio:
 
 plugins:
   - jekyll-paginate-v2

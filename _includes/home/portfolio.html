@@ -1,0 +1,36 @@
+<section id="portfolio" class="section scrollspy">
+    <div class="container">
+        <div class="section-grid">
+            <article>
+                <h4 class="text-title primary-color-text">Portfólio</h4>
+
+                <blockquote>
+                    Aprecie nossa galeria de produtos e serviços que oferecemos ao nosso público alvo
+                </blockquote>
+
+                <div class="text-title hide-on-med-and-down">
+                    <a href="/portfolio/" title="Portfólio" class="btn waves-effect waves-light">Veja Mais</a>
+                </div>
+            </article>
+
+            <ul class="section-grid">
+                {% for item in site.portfolio limit: 2 reversed %}
+                    <li>
+                        <img
+                            data-src="{{ item.image }}?nf_resize=fit&w=320"
+                            alt="{{ item.title }}"
+                            data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                            {{ item.image }}?nf_resize=fit&h=720 3x,
+                            {{ item.image }}?nf_resize=fit&h=1080 4x"
+                            class="lazy materialboxed"
+                            data-caption="{{ item.title }}">
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="text-title hide-on-large-only">
+            <a href="/portfolio/" title="Portfólio" class="btn waves-effect waves-light">Veja Mais</a>
+        </div>
+    </div>
+</section>

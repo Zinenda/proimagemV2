@@ -4,11 +4,11 @@
 - link: "#servicos"
   title: Serviços
 
-- link: "#equipamentos"
-  title: Equipamentos
-
 - link: "#portfolio"
-  title: Portfolio
+  title: Portfólio
+
+- link: "#localizacao"
+  title: Localização
 
 - link: "#clientes"
   title: Clientes
