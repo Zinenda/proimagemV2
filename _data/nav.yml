@@ -7,13 +7,8 @@
 - link: "#equipamentos"
   title: Equipamentos
 
-- link: "#clientes"
-  title: Clientes
-
 - link: "#portfolio"
   title: Portfolio
-  dropdown: true
 
-- link: "#contactos"
-  title: Contactos
-  modal: true
+- link: "#clientes"
+  title: Clientes

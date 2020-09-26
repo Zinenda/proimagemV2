@@ -1,0 +1,12 @@
+{% include header/header-bg.html %}
+
+<header class="page-header white-text">
+    {% include nav/navbar.html %}
+    
+    <div class="container">
+        <h1 class="text-title">Somos a <br>{{ site.title }}</h1>
+        <h4 class="text-title">{{ site.time | date: "%Y" | minus: 2009 }} anos oferecendo <br>{{ site.description }}</h4>
+
+        {% include cta.html %}
+    </div>
+</header>

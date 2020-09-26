@@ -2,13 +2,12 @@
 <html lang="pt">
     {% include head.html %}
     <body>
-        {% include nav/navbar.html %}
-        {% include nav/sidenav.html %}
-        
         <main class="animate-bottom">
-            {% include header.html %}
-
-            {{ content }}
+            {% include header/page-header.html %}
+            
+            <div id="main" class="section no-pad scrollspy">
+                {{ content }}
+            </div>
         </main>
 
         {% include contactos.html %}
