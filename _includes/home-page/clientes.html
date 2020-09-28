@@ -1,9 +1,9 @@
 <section id="clients" class="section scrollspy">
     <div class="container">
         <div class="text-title row slick-clientes">
-            {% for item in site.clients %}
+            {% for item in site.clientes %}
                 <div>
-                    <img data-lazy="{{ item.image }}?nf_resize=fit&w=160" alt="{{ item.company }}">
+                    <img data-lazy="{{ item.image }}?nf_resize=fit&w=80" alt="{{ item.company }}" style="width: 80px; filter: grayscale(1);">
                 </div>
             {% endfor %}
         </div>
