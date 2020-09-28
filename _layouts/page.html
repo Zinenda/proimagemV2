@@ -2,27 +2,26 @@
 layout: default
 ---
 
-<section class="section grey lighten-4">
-    <section id="masonry-grid" class="row">
-        {% for item in paginator.posts %}
-            <div class="col s6 l4 hoverable">
-                <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
-                    <img src="{{ item.image }}" alt="{{ item.title }}">
-                </a>
-            </div>
-        {% endfor %}
-    </section>
+<section class="section">
+    <div class="container">
+        <section id="masonry-grid" class="row section">
+            {% for item in paginator.posts %}
+                <div class="col s6 l4 hoverable">
+                    <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
+                        <img
+                            data-src="{{ item.image }}?nf_resize=fit&w=320"
+                            alt="{{ item.title }}"
+                            data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                            {{ item.image }}?nf_resize=fit&h=720 3x,
+                            {{ item.image }}?nf_resize=fit&h=1080 4x"
+                            class="lazy">
+                    </a>
+                </div>
+            {% endfor %}
+        </section>
+
+        <div class="center">
+            {% include pagination.html %}
+        </div>
+    </div>
 </section>
-
-{% include pagination.html %}
-
-<style>
-    .page-header {
-        height: 50vh;
-        background-image: url(/assets/img/parallax/DSC07594.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-</style>

@@ -50,19 +50,3 @@ collections:
     fields:
       - {label: "Nome do Cliente", name: "title", widget: "string"}
       - {label: "Logotipo do cliente", name: "image", widget: "image"}
-
-  - label: "Equipamentos"
-      name: "equipamentos"
-      folder: "collections/_equipamentos"
-      create: true
-      fields:
-        - label: "Categoria"
-          name: "title"
-          widget: "select"
-          options: ["Impressoras", "Bordados", "Picotagem", "Plotes", "Estampagem"]
-        - label: "Marca"
-          name: "brand"
-          widget: "list"
-          fields:
-            - {label: "Modelo", name: "reference", widget: "string"}
-            - {label: "Imagem", name: "image", widget: "image"}
