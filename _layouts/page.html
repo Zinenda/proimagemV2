@@ -2,22 +2,56 @@
 layout: default
 ---
 
+<style>
+    /* The Masonry Container */
+    .masonry {
+    margin: 5px auto;
+    max-width: 100%;
+    column-gap: 10px;
+    }
+
+    /* The Masonry Brick */
+    .item {
+        padding: 5px;
+        margin: 0 0 5px;
+    }
+
+    /* Masonry on large screens */
+    @media only screen and (min-width: 1024px) {
+    .masonry {
+        column-count: 3;
+    }
+    }
+
+    /* Masonry on medium-sized screens */
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .masonry {
+        column-count: 2;
+    }
+    }
+
+    /* Masonry on small screens */
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+    .masonry {
+        column-count: 1;
+    }
+    }
+</style>
+
 <section class="section">
     <div class="container">
-        <section id="masonry-grid" class="row section">
+        <div class="masonry">
             {% for item in paginator.posts %}
-                <div class="col s6 l4 hoverable">
-                    <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
-                        <img
-                            src="{{ item.image }}?nf_resize=fit&w=320"
-                            alt="{{ item.title }}"
-                            srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
-                            {{ item.image }}?nf_resize=fit&h=720 3x,
-                            {{ item.image }}?nf_resize=fit&h=1080 4x">
-                    </a>
-                </div>
+            <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
+                <img
+                    src="{{ item.image }}?nf_resize=fit&w=320"
+                    alt="{{ item.title }}"
+                    srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                    {{ item.image }}?nf_resize=fit&h=720 3x,
+                    {{ item.image }}?nf_resize=fit&h=1080 4x">
+            </a>
             {% endfor %}
-        </section>
+        </div>
 
         <div class="center">
             {% include pagination.html %}
