@@ -9,12 +9,11 @@ layout: default
                 <div class="col s6 l4 hoverable">
                     <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
                         <img
-                            data-src="{{ item.image }}?nf_resize=fit&w=320"
+                            src="{{ item.image }}?nf_resize=fit&w=320"
                             alt="{{ item.title }}"
-                            data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                            srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
                             {{ item.image }}?nf_resize=fit&h=720 3x,
-                            {{ item.image }}?nf_resize=fit&h=1080 4x"
-                            class="lazy">
+                            {{ item.image }}?nf_resize=fit&h=1080 4x">
                     </a>
                 </div>
             {% endfor %}
