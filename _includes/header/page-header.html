@@ -4,9 +4,18 @@
     {% include nav/navbar.html %}
     
     <div class="container">
-        <h1 class="text-title">Somos a <br>{{ site.title }}</h1>
-        <h4 class="text-title">{{ site.time | date: "%Y" | minus: 2009 }} anos oferecendo <br>{{ site.description }}</h4>
+        <div class="hide-on-med-and-down">
+            <h1 class="text-title">Somos a <br>{{ site.title }}</h1>
+            <h4 class="text-title">{{ site.time | date: "%Y" | minus: 2009 }} anos oferecendo <br>{{ site.description }}</h4>
+        </div>
 
-        {% include cta.html %}
+        <div class="hide-on-large-only">
+            <h3 class="text-title">Somos a <br>{{ site.title }}</h3>
+            <h5 class="text-title">{{ site.time | date: "%Y" | minus: 2009 }} anos oferecendo <br>{{ site.description }}</h5>
+        </div>
+
+        <div class="text-title">
+            {% include header/cta.html %}
+        </div>
     </div>
 </header>

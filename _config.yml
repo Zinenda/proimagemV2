@@ -19,8 +19,8 @@ exclude:
   - vendor/ruby/
   - bower_components
 
-logo: /assets/img/logo-white.svg
-image: /assets/img/logotype-white.svg
+logo: /assets/img/ProImagemLogo.svg
+image: /assets/img/ProImagemLogoWhite.svg
 color: "#2a450e"
 
 sass:
