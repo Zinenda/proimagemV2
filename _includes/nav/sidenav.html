@@ -1,11 +1,21 @@
-<aside id="sideNav" class="sidenav">
-    <div class="container">
-        <a href="/">
-            <img src="{{ site.image }}" alt="{{ site.title }}">
-        </a>
+<!--
+    <ul id="sideNav" class="modal-content">
+    {% include nav/nav.html %}
+</ul>
+-->
+
+<div id="sideNav" class="modal">
+    <div class="modal-content">
+        <div class="container">
+            <ul class="collection">
+                {% for item in site.data.nav %}
+                    <li class="collection-item">
+                        <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text">
+                            <i class="fas fa-lg fa-{{ item.icon }}"></i> {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+        </div>
     </div>
-    <hr class="divider">
-    <ul>
-        {% include nav/nav.html %}
-    </ul>
-</aside>
+</div>

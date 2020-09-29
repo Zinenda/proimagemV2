@@ -1,14 +1,19 @@
-- link: "#sobre"
+- url: "#sobre"
   title: Sobre
+  icon: users
 
-- link: "#servicos"
+- url: "#servicos"
   title: Serviços
+  icon: tasks
 
-- link: "#portfolio"
+- url: "#portfolio"
   title: Portfólio
+  icon: images
 
-- link: "#localizacao"
+- url: "#localizacao"
   title: Localização
+  icon: map-marker
 
-- link: "#clientes"
+- url: "#clientes"
   title: Clientes
+  icon: user-tie

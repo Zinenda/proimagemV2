@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.sidenav').sidenav();
+  $(".dropdown-trigger").dropdown();
   $('.scrollspy').scrollSpy();
   $('.modal').modal();
   $('.collapsible').collapsible();
