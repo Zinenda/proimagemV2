@@ -16,7 +16,7 @@
             <ul class="section-grid">
                 {% for item in site.portfolio limit: 2 reversed %}
                     <li>
-                        <img
+                        <img data-aos="zoom-in" data-aos-duration="3000"
                             data-src="{{ item.image }}?nf_resize=fit&w=320"
                             alt="{{ item.title }}"
                             data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,

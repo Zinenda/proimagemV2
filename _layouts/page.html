@@ -43,12 +43,13 @@ layout: default
         <div class="masonry">
             {% for item in paginator.posts %}
             <a href="{{ item.image }}" data-title="{{ item.title }}" data-lightbox="{{ page.title }}">
-                <img
-                    src="{{ item.image }}?nf_resize=fit&w=320"
+                <img data-aos="zoom-in" data-aos-duration="3000"
+                    data-src="{{ item.image }}?nf_resize=fit&w=320"
                     alt="{{ item.title }}"
-                    srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                    data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
                     {{ item.image }}?nf_resize=fit&h=720 3x,
-                    {{ item.image }}?nf_resize=fit&h=1080 4x">
+                    {{ item.image }}?nf_resize=fit&h=1080 4x"
+                    class="lazy">
             </a>
             {% endfor %}
         </div>

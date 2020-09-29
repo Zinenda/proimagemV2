@@ -8,14 +8,14 @@
 <!-- Lazy Loading-->
 <script src="/assets/js/lazyloading.js" defer></script>
 
-{% include aos.html %}
+{% include scripts/aos.html %}
 
 {% if page.layout == "default" %}
-	{% include slick-carousel.html %}
+	{% include scripts/slick-carousel.html %}
 {% endif %}
 
 {% if page.layout == "page" %}
-	{% include lightbox.html %}
+	{% include scripts/lightbox.html %}
 	<script src="/assets/js/masonry.pkgd.min.js" defer></script>
 {% endif %}
 
