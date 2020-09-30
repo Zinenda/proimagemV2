@@ -1,21 +1,10 @@
-<!--
-    <ul id="sideNav" class="modal-content">
-    {% include nav/nav.html %}
-</ul>
--->
+<ul id="sideNav" class="sidenav">
+    <li><img src="{{ site.logo }}" alt="{{ site.title }}"></li>
+    <li class="divider"></li>
 
-<div id="sideNav" class="modal">
-    <div class="modal-content">
-        <div class="container">
-            <ul class="collection">
-                {% for item in site.data.nav %}
-                    <li class="collection-item">
-                        <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text">
-                            <i class="fas fa-lg fa-{{ item.icon }}"></i> {{ item.title }}
-                        </a>
-                    </li>
-                {% endfor %}
-                </ul>
-        </div>
-    </div>
-</div>
+    {% for item in site.data.nav %}
+        <li>
+            <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text"><i class="fas fa-lg fa-{{ item.icon }}"></i> {{ item.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
