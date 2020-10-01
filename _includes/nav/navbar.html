@@ -1,4 +1,4 @@
-<nav class="transparent">
+<nav class="nav-extended transparent">
     <div class="container">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">
@@ -8,6 +8,12 @@
             <ul class=" right hide-on-med-and-down">
                 {% include nav/nav.html %}
             </ul>
+        </div>
+
+        <div class="nav-content center">
+            <a href="tel:{{ site.phone }}" class="btn-floating halfway-fab waves-effect waves-circle waves-light hide-on-med-and-up">
+                <i class="fas fa-lg fa-phone"></i>
+            </a>
         </div>
     </div>
 </nav>

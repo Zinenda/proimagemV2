@@ -4,12 +4,11 @@
             <div class="card hoverable" data-aos="zoom-in" data-aos-duration="3000">
                 <div class="card-image waves-effect waves-block waves-light activator">
                     <img
-                        data-src="{{ item.image }}?nf_resize=fit&w=320"
+                        src="{{ item.image }}?nf_resize=fit&w=320"
                         alt="{{ item.title }}"
-                        data-srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
+                        srcset="{{ item.image }}?nf_resize=fit&h=480 2x,
                         {{ item.image }}?nf_resize=fit&h=720 3x,
-                        {{ item.image }}?nf_resize=fit&h=1080 4x"
-                        class="lazy">
+                        {{ item.image }}?nf_resize=fit&h=1080 4x">
                 </div>
 
                 <div class="card-content left-align">
