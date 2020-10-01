@@ -9,12 +9,11 @@ $('.single-item').slick({
 
 $('.slick-servicos').slick({
     dots: true,
-    speed: 5000,
+    infinite: false,
+    lazyLoad: 'ondemand',
+    speed: 300,
     slidesToShow: 2,
     slidesToScroll: 2,
-    lazyLoad: 'ondemand',
-    infinite: true,
-    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
