@@ -1,4 +1,4 @@
 ---
 title: Mozambique Leaf Tobacco
-image: /assets/uploads/vale.svg
+image: /assets/uploads/mlt.svg
 ---
