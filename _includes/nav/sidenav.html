@@ -1,6 +1,6 @@
 <aside id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    
+
     <a href="/">
         <img src="{{ site.logo }}" style="width: 90%">
     </a>
@@ -10,7 +10,7 @@
     <ul>
         {% for item in site.data.nav %}
             <li>
-                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-primary">{{ item.title }}</a>
+                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-primary" onclick="closeNav()">{{ item.title }}</a>
             </li>
         {% endfor %}
     </ul>
