@@ -1,13 +1,27 @@
-<aside id="sideNav" class="sidenav">
+<aside id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     
-    <div class="text-title container">
-        <img src="{{ site.logo }}" alt="{{ site.title }}">
-    </div>
-    
+    <a href="/">
+        <img src="{{ site.logo }}" style="width: 90%">
+    </a>
+
     <div class="divider"></div>
-    
+        
     <ul>
-        <li><a href="/" {% if page.layout == "default" %}class="active"{% endif %}>Página Inicial</a></li>
-        {% include nav/nav.html %}
+        {% for item in site.data.nav %}
+            <li>
+                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-primary">{{ item.title }}</a>
+            </li>
+        {% endfor %}
     </ul>
 </aside>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+</script>

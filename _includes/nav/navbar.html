@@ -3,7 +3,7 @@
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">{% include nav/ProImagemLogoWhite.svg %}</a>
 
-            <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="fas fa-lg fa-bars"></i></a>
+            <a href="#" class="left" onclick="openNav()"><i class="fas fa-bars"></i></a>
 
             <ul class=" right hide-on-med-and-down">
                 {% include nav/nav.html %}
@@ -11,9 +11,11 @@
         </div>
 
         <div class="nav-content center">
-            <a href="tel:{{ site.phone }}" class="btn-floating halfway-fab waves-effect waves-circle waves-light hide-on-med-and-up">
-                <i class="fas fa-lg fa-phone"></i>
-            </a>
+            <button class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light hide-on-med-and-up">
+                <a href="tel:{{ site.phone }}">
+                    <i class="fas fa-lg fa-phone"></i>
+                </a>
+            </button>
         </div>
     </div>
 </nav>
