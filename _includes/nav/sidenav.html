@@ -1,10 +1,13 @@
-<ul id="sideNav" class="sidenav">
-    <li><img src="{{ site.logo }}" alt="{{ site.title }}"></li>
-    <li class="divider"></li>
-
-    {% for item in site.data.nav %}
-        <li>
-            <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text"><i class="fas fa-lg fa-{{ item.icon }}"></i> {{ item.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<aside id="sideNav" class="sidenav">
+    
+    <div class="text-title container">
+        <img src="{{ site.logo }}" alt="{{ site.title }}">
+    </div>
+    
+    <div class="divider"></div>
+    
+    <ul>
+        <li><a href="/" {% if page.layout == "default" %}class="active"{% endif %}>Página Inicial</a></li>
+        {% include nav/nav.html %}
+    </ul>
+</aside>

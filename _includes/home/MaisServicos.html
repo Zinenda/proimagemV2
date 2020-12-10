@@ -12,17 +12,25 @@
                 </div>
 
                 <div class="card-content left-align">
-                    <strong style="cursor: pointer;" class="activator primary-color-text left-align">{{ item.title }}  <i class="fas fa-ellipsis-v right activator"></i></strong>
-                </div>
-
-                <div class="card-reveal left-align">
-                    <span class="card-title activator primary-color-text left-align">{{ item.title }}  <i class="right">&times;</i></span>
-
-                    <article class="light text-justified">
-                        {{ item.content }}
-                    </article>
+                    <strong class="left-align">
+                        <a href="#servicos{{ forloop.index }}" class="primary-color-text modal-trigger">{{ item.title }}</a>
+                    </strong>
                 </div>
             </div>
         </div>    
     {% endfor %}
 </div>
+
+{% for item in site.servicos %}
+    <div id="servicos{{ forloop.index }}" class="modal">
+        <div class="modal-content">
+            <div class="container">
+                <p class="bolder">{{ item.title }}</p>
+
+                <article class="light text-justified">
+                    {{ item.content }}
+                </article>
+            </div>
+        </div>
+    </div>
+{% endfor %}

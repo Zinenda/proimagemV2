@@ -11,6 +11,8 @@ $('.slick-servicos').slick({
     dots: true,
     infinite: false,
     lazyLoad: 'ondemand',
+    autoplay: true,
+    autoplaySpeed: 5000,
     speed: 300,
     slidesToShow: 2,
     slidesToScroll: 2,

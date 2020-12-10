@@ -121,11 +121,3 @@ i, em {
 .waves-effect.waves-primary .waves-ripple {
     background-color: rgba($color: $primary-color, $alpha: 0.65);
 }
-
-#clientes {
-    img {
-        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(100%);
-        width: 80px;
-    }
-}
