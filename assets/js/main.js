@@ -4,4 +4,5 @@ $(document).ready(function(){
   $('.tooltipped').tooltip();
   $('.collapsible').collapsible();
   $('.materialboxed').materialbox();
+  $('.fixed-action-btn').floatingActionButton();
 });

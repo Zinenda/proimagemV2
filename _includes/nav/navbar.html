@@ -1,23 +1,25 @@
-<nav class="nav-extended transparent">
-    <div class="container">
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo">{% include nav/ProImagemLogoWhite.svg %}</a>
-
-            <a href="#" class="left" onclick="openNav()"><i class="fas fa-bars"></i></a>
-
-            <ul class=" right hide-on-med-and-down">
-                {% include nav/nav.html %}
-            </ul>
+<div class="navbar-fixed">
+    <nav class="nav-extended white">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">{% include nav/ProImagemLogo.svg %}</a>
+    
+                <a href="#" class="left hide-on-large-only primary-color-text" onclick="openNav()" ><i class="fas fa-bars"></i></a>
+    
+                <ul class=" right hide-on-med-and-down">
+                    {% include nav/nav.html %}
+                </ul>
+            </div>
+    
+            <div class="nav-content center">
+                <button class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light hide-on-med-and-up">
+                    <a href="tel:{{ site.phone }}">
+                        <i class="fas fa-lg fa-phone"></i>
+                    </a>
+                </button>
+            </div>
         </div>
-
-        <div class="nav-content center">
-            <button class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light hide-on-med-and-up">
-                <a href="tel:{{ site.phone }}">
-                    <i class="fas fa-lg fa-phone"></i>
-                </a>
-            </button>
-        </div>
-    </div>
-</nav>
+    </nav>
+</div>
 
 {% include nav/sidenav.html %}

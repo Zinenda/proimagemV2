@@ -1,15 +1,19 @@
 - title: Facebook
   url: https://fb.me/proimagemmoz
   icon: facebook-f
+  color: "#3b5998"
 
 - title: Messenger
   url: https://m.me/proimagemmoz
   icon: facebook-messenger
+  color: "#006AFF"
   
 - title: Instagram
   url: https://www.instagram.com/proimagem_lda/
   icon: instagram
+  color: "#3f729b"
 
 - title: WhatsApp
   url: https://wa.me/258845274702
   icon: whatsapp
+  color: "#34B7F1"

@@ -1,3 +1,17 @@
 <div class="fixed-action-btn">
-    a.btn-floating.
+    <button class="btn-floating btn-large"><i class="fas fa-lg fa-plus"></i></button>
+
+    <ul>
+        <li>
+            <a href="#page-header" class="btn-floating"><i class="fas fa-chevron-up"></i></a>
+        </li>
+
+        {% for item in site.data.social %}
+            <li>
+                <a href="{{ item.url }}" class="btn-floating" style="background: {{ item.color }};" title="{{ item.title }}">
+                    <i class="fab fa-fw fa-{{ item.icon }}"></i>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </div>
